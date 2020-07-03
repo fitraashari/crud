@@ -26,18 +26,25 @@ class PertanyaanController extends Controller
     public function create(){
         return view('pertanyaan.form');
     }
+    public function edit($id){
+        $question = PertanyaanModel::detail_q($id);
+        return view('pertanyaan.edit',compact('question'));
+    }
     public function store(Request $request){
         $validatedData = $request->validate([
             'title' => ['required','max:191'],
             'content' => ['required','max:191'],
         ]);
-        $data = $request->all();
-        unset($data['_token']);
-        $question = PertanyaanModel::save($data);
+        $question = PertanyaanModel::save($request->all());
         if($question){
-            return redirect('pertanyaan');
+            return redirect('/pertanyaan');
         }
         //dd($data);
         
+    }
+    public function update($id,Request $request){
+        //dd($request->all());
+        $question = PertanyaanModel::update($id,$request->all());
+        return redirect('/pertanyaan');
     }
 }

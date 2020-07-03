@@ -17,13 +17,11 @@ class JawabanController extends Controller
             'content' => ['required','max:191'],
         ]);
         //dd($validatedData);
-        $data = $request->all();
-        $data["question_id"]=$id;
-        unset($data['_token']);
+        
         //dd($data);
-        $answer = JawabanModel::save($data);
+        $answer = JawabanModel::save($id,$request->all());
         if($answer){
-            return redirect('pertanyaan/detail/'.$id);
+            return redirect('pertanyaan/'.$id);
         }
     }
 }
