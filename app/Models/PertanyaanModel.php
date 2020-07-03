@@ -16,13 +16,12 @@ class PertanyaanModel{
         return $question;
     }
     public static function update($id,$data){
-        unset($data['_token']);
-        unset($data['_method']);
         $question = DB::table('questions')
                     ->where('id',$id)
                     ->update([
                         'title'=>$data['title'],
-                        'content'=>$data['content']
+                        'content'=>$data['content'],
+                        'updated_at'=>$data['updated_at'],
                     ]);
         return $question;
     }

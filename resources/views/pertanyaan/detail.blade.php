@@ -10,7 +10,12 @@
     <!-- /.card-header -->
     <div class="card-body">
         <p>{{$pertanyaan->content}}</p>
-            <footer class="blockquote-footer">Created at: {{$pertanyaan->created_at}}</footer>
+            <footer class="blockquote-footer">Created at: {{$pertanyaan->created_at}}
+            
+              @if ($pertanyaan->created_at!=$pertanyaan->updated_at)
+              <cite title="Source Title">, Last modified: {{$pertanyaan->updated_at}}</cite>
+              @endif
+            </footer>
             
     </div>
 </div>
