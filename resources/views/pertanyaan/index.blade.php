@@ -1,13 +1,13 @@
 @extends('adminlte.master')
 @section('content')
-<div class="card">
+<div class="card card-info">
     <div class="card-header">
       <h3 class="card-title">Questions</h3>
       
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <a href="/pertanyaan/form" class="btn btn-primary mb-2">Ask Question?</a>
+        <a href="/pertanyaan/form" class="btn btn-primary mb-2"><i class="fas fa-question-circle"></i> Ask Question</a>
         
 <table class="table table-striped" id="question">
     <thead>

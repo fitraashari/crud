@@ -1,6 +1,9 @@
 @extends('adminlte.master')
 @section('content')
-<div class="card">
+<div class="row">
+  <div class="col-lg-6">
+    
+<div class="card card-info">
     <div class="card-header">
       <h3 class="card-title">Questions Form</h3>
       
@@ -24,7 +27,7 @@
   </div>
   <div class="form-group">
     <label for="content">Question:</label>
-    <input type="text" class="form-control" placeholder="Isi Pertanyaan" id="content" name="content">
+    <textarea class="form-control" placeholder="Isi Pertanyaan" id="content" name="content"></textarea>
   </div>
   <div class="form-group">
   <input type="hidden" class="form-control" name="created_at" value="{{now()}}">
@@ -33,5 +36,8 @@
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
     </div>
+</div>
+
+</div>
 </div>
 @endsection

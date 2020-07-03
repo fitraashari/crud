@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('adminlte.master');
+    return view('index');
 });
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/form', 'PertanyaanController@create');

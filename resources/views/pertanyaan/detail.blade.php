@@ -1,9 +1,10 @@
 @extends('adminlte.master')
 @section('content')
-
-<div class="card">
+<div class="row">
+  <div class="col-lg-6">
+<div class="card card-info">
     <div class="card-header">
-    <h3 class="card-title">{{$pertanyaan->title}}</h3>
+    <h3 class="card-title">Question: {{$pertanyaan->title}}</h3>
       
     </div>
     <!-- /.card-header -->
@@ -104,7 +105,8 @@
       <!-- /.col -->
     </div>
   </div>
-
+</div>
+</div>
 
 
     
