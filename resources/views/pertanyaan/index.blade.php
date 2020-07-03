@@ -31,7 +31,12 @@
           <a href="pertanyaan/{{$question->id}}" class="btn btn-sm btn-primary"><i class="fas fa-reply"></i></a>
           <a href="jawaban/{{$question->id}}" class="btn btn-sm btn-success"><i class="fas fa-comments"></i></a>
           <a href="pertanyaan/{{$question->id}}/edit" class="btn btn-sm btn-warning"><i class="fas fa-edit"></i></a>
-          <a href="pertanyaan/{{$question->id}}/delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a>
+          {{-- <a href="pertanyaan/{{$question->id}}/delete" class="btn btn-sm btn-danger"><i class="fas fa-trash"></i></a> --}}
+          <form action="pertanyaan/{{$question->id}}" method="post" style="display:inline;">
+            @csrf
+            @method('DELETE')
+            <button type="submit" class="btn btn-sm btn-danger float"><i class="fas fa-trash"></i></button>
+          </form>
         </td>
       </tr>
                   

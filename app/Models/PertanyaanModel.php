@@ -25,4 +25,8 @@ class PertanyaanModel{
                     ]);
         return $question;
     }
+    public static function delete($id){
+        $question = DB::table('questions')->where('id', '=', $id)->delete();
+        return $question;
+    }
 }
