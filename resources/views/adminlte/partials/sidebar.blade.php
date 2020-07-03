@@ -37,10 +37,10 @@
           </li>
  
           <li class="nav-item ">
-            <a href="/data-tables" class="nav-link">
+            <a href="/pertanyaan" class="nav-link">
               <i class="nav-icon fas fa-table"></i>
               <p>
-               Data Tables
+               Pertanyaan
                 
               </p>
             </a>

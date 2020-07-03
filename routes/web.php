@@ -14,3 +14,7 @@
 Route::get('/', function () {
     return view('adminlte.master',['judul'=>'master']);
 });
+Route::get('/pertanyaan', 'PertanyaanController@index');
+Route::get('/pertanyaan/form', 'PertanyaanController@create');
+Route::post('/pertanyaan','PertanyaanController@store');
+Route::get('/pertanyaan/detail/{id}','PertanyaanController@detail');
