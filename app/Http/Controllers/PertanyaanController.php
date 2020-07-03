@@ -43,6 +43,10 @@ class PertanyaanController extends Controller
         
     }
     public function update($id,Request $request){
+        $validatedData = $request->validate([
+            'title' => ['required','max:191'],
+            'content' => ['required','max:191'],
+        ]);
         //dd($request->all());
         $question = PertanyaanModel::update($id,$request->all());
         return redirect('/pertanyaan');
