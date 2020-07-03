@@ -7,7 +7,7 @@
     </div>
     <!-- /.card-header -->
     <div class="card-body">
-        <a href="form" class="btn btn-primary">Input Pertanyaan</a>
+        <a href="/pertanyaan/form" class="btn btn-primary">Input Pertanyaan</a>
 <table class="table table-striped">
     <thead>
       <tr>
@@ -15,7 +15,7 @@
         <th>Judul</th>
         <th>Pertanyaan</th>
         <th>Tanggal</th>
-        <th>Action</th>
+        <th>...</th>
       </tr>
     </thead>
     <tbody>

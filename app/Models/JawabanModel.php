@@ -3,7 +3,7 @@ namespace App\Models;
 use Illuminate\Support\Facades\DB;
 class JawabanModel{
     public static function get_answer($id_q){
-        $answers = DB::table('answers')->where('question_id',$id_q);
+        $answers = DB::table('answers')->where('question_id',$id_q)->get();
         return $answers;
     }
     public static function save($data){
