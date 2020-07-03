@@ -14,8 +14,9 @@ class JawabanController extends Controller
     }
     public function store($id,Request $request){
         $validatedData = $request->validate([
-            'content' => ['required'],
+            'content' => ['required','max:191'],
         ]);
+        //dd($validatedData);
         $data = $request->all();
         $data["question_id"]=$id;
         unset($data['_token']);

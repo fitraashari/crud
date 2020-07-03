@@ -8,6 +8,7 @@
     <!-- /.card-header -->
     <div class="card-body">
         <a href="/pertanyaan/form" class="btn btn-primary mb-2">Ask Question?</a>
+        
 <table class="table table-striped" id="question">
     <thead>
       <tr>
@@ -18,7 +19,7 @@
         <th>...</th>
       </tr>
     </thead>
-    <tbody>
+    <tbody>@if (!$questions->isEmpty())
         @foreach ($questions as $key => $question)
        
       <tr>
@@ -33,8 +34,10 @@
       </tr>
                   
       @endforeach
+      @endif
     </tbody>
   </table>
+
     </div>
 </div>
   @endsection

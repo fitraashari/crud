@@ -28,8 +28,8 @@ class PertanyaanController extends Controller
     }
     public function store(Request $request){
         $validatedData = $request->validate([
-            'title' => ['required'],
-            'content' => ['required'],
+            'title' => ['required','max:191'],
+            'content' => ['required','max:191'],
         ]);
         $data = $request->all();
         unset($data['_token']);
