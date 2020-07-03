@@ -28,8 +28,8 @@
       <td>{{$question->content}}</td>
       <td>{{$question->created_at}}</td>
       <td> 
-          <a href="pertanyaan/detail/{{$key+1}}" class="btn btn-sm btn-primary"><i class="fas fa-reply"></i></a>
-          <a href="jawaban/{{$key+1}}" class="btn btn-sm btn-success"><i class="fas fa-comments"></i></a>
+          <a href="pertanyaan/detail/{{$question->id}}" class="btn btn-sm btn-primary"><i class="fas fa-reply"></i></a>
+          <a href="jawaban/{{$question->id}}" class="btn btn-sm btn-success"><i class="fas fa-comments"></i></a>
         </td>
       </tr>
                   
