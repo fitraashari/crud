@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\PertanyaanModel;
-
+use App\Models\JawabanModel;
 class PertanyaanController extends Controller
 {
     //
@@ -15,9 +15,14 @@ class PertanyaanController extends Controller
     }
     public function detail($id){
         $question = PertanyaanModel::detail_q($id);
+        $answers = JawabanModel::get_answer($id);
         //dd($question);
-        return view('pertanyaan.detail', compact('question'));
+        $data['pertanyaan'] = $question;
+        $data['jawaban']=$answers;
+        return view('pertanyaan.detail', $data);
+
     }
+
     public function create(){
         return view('pertanyaan.form');
     }

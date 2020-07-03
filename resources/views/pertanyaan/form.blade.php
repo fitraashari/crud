@@ -2,7 +2,7 @@
 @section('content')
 <div class="card">
     <div class="card-header">
-      <h3 class="card-title">Form Pertanyaan</h3>
+      <h3 class="card-title">Questions Form</h3>
       
     </div>
     <!-- /.card-header -->
@@ -19,11 +19,11 @@
 <form action="/pertanyaan" method="post">
     @csrf
   <div class="form-group">
-    <label for="title">Judul Pertanyaan:</label>
+    <label for="title">Title:</label>
     <input type="text" class="form-control" placeholder="Judul Pertanyaan" id="title" name="title">
   </div>
   <div class="form-group">
-    <label for="content">Pertanyaan:</label>
+    <label for="content">Question:</label>
     <input type="text" class="form-control" placeholder="Isi Pertanyaan" id="content" name="content">
   </div>
   <div class="form-group">

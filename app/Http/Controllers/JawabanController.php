@@ -8,11 +8,14 @@ class JawabanController extends Controller
 {
     public function index($id){
         $answers = JawabanModel::get_answer($id);
-        //dd($answers);
-        return view('jawaban.index',compact('answers'));
+        $data['jawaban']=$answers;
+        //dd($data);
+        return view('jawaban.index',$data);
     }
     public function store($id,Request $request){
-
+        $validatedData = $request->validate([
+            'content' => ['required'],
+        ]);
         $data = $request->all();
         $data["question_id"]=$id;
         unset($data['_token']);

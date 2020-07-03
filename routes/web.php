@@ -12,7 +12,7 @@
 */
 
 Route::get('/', function () {
-    return view('adminlte.master',['judul'=>'master']);
+    return view('adminlte.master');
 });
 Route::get('/pertanyaan', 'PertanyaanController@index');
 Route::get('/pertanyaan/form', 'PertanyaanController@create');
