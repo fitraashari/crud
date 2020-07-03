@@ -47,8 +47,9 @@
           @else
 <!-- timeline item -->
 <div>
-    <i class="fas fa-comments bg-info"></i>
-    <div class="timeline-item bg-info">
+    
+    <i class="icon fas fa-exclamation-triangle bg-warning"></i>
+    <div class="timeline-item bg-warning">
       <div class="timeline-body ">
         Belum Ada jawaban
       </div>
@@ -66,7 +67,7 @@
             <i class="fas fa-comments bg-primary"></i>
             <div class="timeline-item">
               <span class="time"><i class="fas fa-clock"></i> {{now()}}</span>
-              <h3 class="timeline-header">Your Answer</h3>
+              <h3 class="timeline-header ">Your Answer</h3>
               <div class="timeline-body">
                 @if ($errors->any())
                 <div class="alert alert-danger">
@@ -88,7 +89,7 @@
                   <input type="hidden" class="form-control" name="updated_at" value="{{now()}}">
                   </div> 
                   {{-- <a href="/pertanyaan" class="btn btn-dark">Kembali</a> --}}
-                  <button type="submit" class="btn btn-primary">Send</button>
+                  <button type="submit" class="btn btn-primary">Send <i class="fas fa-paper-plane"></i></button>
                 </form>
               </div>
               <div class="timeline-footer">

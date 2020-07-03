@@ -40,7 +40,7 @@
   </div>
 <a href="/pertanyaan" class="btn btn-dark mb-2">Kembali</a>
 @else
-<div class="alert alert-info">Belum Ada jawaban</div>
+<div class="alert alert-warning"><i class="icon fas fa-exclamation-triangle"></i> Belum Ada jawaban</div>
 @endif
 
 @endsection
